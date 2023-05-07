@@ -34,7 +34,7 @@ talkers.get('/:id', async (req, res) => {
   return res.status(200).json(person);
 });
 
-talkers.post('/', validateToken, validateName, validateAge, validateTalk, validareRate,
+talkers.post('/', validateName, validateAge, validateTalk, validareRate,
 validateDate, async (req, res) => {
   const { name, age, talk } = req.body;
   const { watchedAt, rate } = talk;
